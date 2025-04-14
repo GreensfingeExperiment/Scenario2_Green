@@ -9,8 +9,6 @@ public class ArticleService {
     public String findQtyArticleView() {
         Integer views = repository.findQtyViews();
 
-        //USE the toggle logic
-
         return String.format("This article has been viewed %d times.", views);
     }
 
