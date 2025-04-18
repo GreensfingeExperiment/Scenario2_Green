@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class ArticleServiceTest {
 
     @Test
-    void testFindQtyArticleView() {
+    void testArticles() {
         ArticleService articleService = new ArticleService();
 
         List<Article> articles = new ArrayList<>();
@@ -24,7 +24,7 @@ class ArticleServiceTest {
     }
 
     @Test
-    void testFindQtyArticleUsingGreenFramework() {
+    void testFindArticlesUsingGreenFramework() {
         ArticleService articleService = GreenFactory.greenify(ArticleService.class);
 
         //Create the green configuration
