@@ -1,15 +1,16 @@
 package net.sf.esfinge.experiment.scenario2green.service;
 
-import net.sf.esfinge.experiment.scenario2green.repository.ArticleRepository;
+import net.sf.esfinge.experiment.scenario2green.entity.Article;
+
+import java.util.List;
 
 public class ArticleService {
 
-    private final ArticleRepository repository = new ArticleRepository();
-
-    public String findQtyArticleView() {
-        Integer views = repository.findQtyViews();
-
-        return String.format("This article has been viewed %d times.", views);
+    //Use the Annotation like the example documentation
+    public void findArticles(List<Article> param) {
+        param.add(new Article(50, "Article1"));
+        param.add(new Article(53, "Article2"));
+        param.add(new Article(2, "Article3"));
     }
 
 }
