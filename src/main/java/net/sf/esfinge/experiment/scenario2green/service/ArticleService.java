@@ -1,16 +1,16 @@
 package net.sf.esfinge.experiment.scenario2green.service;
 
 import net.sf.esfinge.experiment.scenario2green.entity.Article;
+import net.sf.esfinge.experiment.scenario2green.repository.ArticleRepository;
 
 import java.util.List;
 
 public class ArticleService {
 
-    //Use the Annotation like the example documentation
+    private final ArticleRepository repository = new ArticleRepository();
+
     public void findArticles(List<Article> param) {
-        param.add(new Article(50, "Article1"));
-        param.add(new Article(53, "Article2"));
-        param.add(new Article(2, "Article3"));
+        repository.findArticle(param);
     }
 
 }

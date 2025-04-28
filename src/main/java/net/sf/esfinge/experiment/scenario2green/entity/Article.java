@@ -2,9 +2,9 @@ package net.sf.esfinge.experiment.scenario2green.entity;
 
 public class Article {
 
-    public Article(Integer view, String name) {
+    public Article(String view, String name) {
         this.name = name;
-        this.view = view;
+        this.view = Integer.valueOf(view);
     }
 
     private Integer view;
