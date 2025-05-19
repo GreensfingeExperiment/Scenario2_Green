@@ -13,7 +13,6 @@ public class ArticleRepository {
     private static final String FILE_PATH = "src/main/resources/articles.txt";
 
     public void findArticle(List<Article> param) {
-        System.out.println("Method findArticle executed");
         try {
             List<Article> articles = readLinesFile();
             Article article = articles.get(0);

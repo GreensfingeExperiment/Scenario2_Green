@@ -1,20 +1,22 @@
 
-# 📰 Article View Counter – GreenEsfinge Experiment
+# 📰 Article View Counter – Greensfinge Experiment
 
-This project simulates an article view counter, commonly used in blogs or content platforms. It is part of an experiment to demonstrate how energy-saving strategies can be integrated into Java applications using the **GreenEsfinge Framework**.
+This project simulates an article view counter, commonly used in blogs or content platforms. It is part of an experiment to demonstrate how energy-saving strategies can be integrated into Java applications using the **Greensfinge Framework**.
 
 ## 📦 Project Structure
 
-The project follows a simple architecture with a `service` and an `entity`.
+The project follows a simple architecture with a service, entity and repository.
 
 ## ✅ Description
 
-- `entity.Article`: Represents an article with name and view attributes.
-- `service.ArticleService`: Contains the business logic to add articles with view counts.
+- `entity.Article`: Contains the business entity class.
+- `service.ArticleService`: Contains the business logic to format the article view message.
+- `repository.ArticleRepository`: Simulates a database to search the values.
 
 ## 🧪 Unit Tests
 
 The test class `ArticleServiceTest` validates the behavior of the logic for adding articles:
 
-- `testFindQtyArticleView`: Verifies that the original service adds exactly 3 articles.
-- `testFindQtyArticleUsingGreenFramework`: Uses `GreenFactory.greenify` to dynamically modify the method’s behavior, demonstrating how the framework can alter execution to promote energy efficiency (e.g., by reducing the number of returned articles).
+In this task, you will see something like this, and the goal is to make all tests pass successfully.
+
+![img.png](img.png)![img.png](img.png)
