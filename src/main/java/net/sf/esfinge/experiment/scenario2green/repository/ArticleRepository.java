@@ -12,14 +12,14 @@ public class ArticleRepository {
 
     private static final String FILE_PATH = "src/main/resources/articles.txt";
 
-    public void findArticle(List<Article> param) {
-        try {
-            List<Article> articles = readLinesFile();
-            Article article = articles.get(0);
-            param.add(article);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public void findArticle(StringBuilder param, List<Article> articles) throws IOException {
+        articles.addAll(readLinesFile());
+        param.append(articles.get(0).getName());
+    }
+
+    public void findArticleViews(StringBuilder param) throws IOException {
+        List<Article> articles = readLinesFile();
+        param.append(articles.get(0).getView());
     }
 
     private List<Article> readLinesFile() throws IOException {

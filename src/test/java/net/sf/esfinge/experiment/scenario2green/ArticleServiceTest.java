@@ -1,36 +1,32 @@
 package net.sf.esfinge.experiment.scenario2green;
 
-import net.sf.esfinge.experiment.scenario2green.entity.Article;
 import net.sf.esfinge.experiment.scenario2green.service.ArticleService;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ArticleServiceTest {
 
+    private static final String ARTICLE = "The article Como fazer um bolo simples contains 10 pages and has been viewed 45 times.";
+    private static final String SAVE_ENERGY_ARTICLE = "The article Como fazer um bolo simples has been viewed 45 times.";
+
     @Test
-    void testFindQtyArticleView() {
+    void testFindArticleView() {
         ArticleService articleService = new ArticleService();
 
-        List<Article> articles = new ArrayList<>();
-        articleService.findArticles(articles);
+        String titleArticle = articleService.findArticle();
 
-        assertEquals(1, articles.size());
-        assertEquals("Como fazer um bolo simples", articles.get(0).getName());
-        assertEquals(45, articles.get(0).getView());
+        assertEquals(ARTICLE, titleArticle);
     }
 
     @Test
-    void testFindQtyArticleUsingGreenFramework() {
+    void testFindArticleUsingLogic() {
         ArticleService articleService = new ArticleService();
+        articleService.saveConsumptionEnergy(true);
 
-        List<Article> articles = new ArrayList<>();
-        articleService.findArticles(articles);
+        String titleArticle = articleService.findArticle();
 
-        assertEquals(0, articles.size());
+        assertEquals(SAVE_ENERGY_ARTICLE, titleArticle);
     }
 
 
