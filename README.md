@@ -30,6 +30,6 @@ The test class `ArticleServiceTest` validates the behavior of the view counter l
 
 When you open the project, to make sure that everything is correctly configured, you need to run the tests and teh result should be the one in teh pecture: on test will pass and the other not. When you make all tests pass successfully, your task is complete.
 
-> `IMPORTANT: You cannot change the test code!`
+<span style="color:red">IMPORTANT: You cannot change the test code!.</span>
 
 ![img.png](img.png)
