@@ -22,6 +22,9 @@ In the ArticleService class, the testFindArticleView() method searches for an ar
 
 To implement this functionality, when the new method saveConsumptionEnergy() is called with the parameter "true", the number of pages should be disabled. The method saveConsumptionEnergy() is empty and you need to implement it as part of your task.
 
+<span style="color:red">⚠️Note: You are only allowed to make changes in the classes `ArticleService` and `ProcessArticlePage`.</span>
+
+
 ---
 
 ## 🧪 Unit Tests
