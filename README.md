@@ -14,13 +14,16 @@ The project follows a simple architecture with a service, entity and repository.
 
 - `entity.Article`: Contains the business entity class.
 - `service.ArticleService`: Contains the business logic to format the article view message.
+- `service.ProcessArticlePage`: Contains the business logic to count the number of pages.
 - `repository.ArticleRepository`: Simulates a database to search the values.
+
+The ProcessArticlePage class can be "greenified" using GreenFactory, allowing its behavior to change based on energy-efficiency configurations.
 
 ### ❓ Task
 
-In the ArticleService class, the testFindArticleView() method searches for an article, a product, and the number of views. Currently, this method also returns the number of pages. To save energy when the user does not need the page count, you should implement functionality to make this optional.
+In the ArticleService class, the testFindArticleView() method searches for an article, a product, and the number of views. Currently, this method also returns the number of pages. To save energy when the user does not need the page count, you should implement functionality to make this optional usign the GreenFramework.
 
-To implement this functionality, when the new method saveConsumptionEnergy() is called with the parameter "true", the number of pages should be disabled. The method saveConsumptionEnergy() is empty and you need to implement it as part of your task.
+To implement this functionality, when the new method saveConsumptionEnergy() is called with the parameter "true", the number of pages should be disabled. The method saveConsumptionEnergy() is empty and you need to implement it as part of your task, usign the GreenFramework
 
 <span style="color:red">⚠️Note: You are only allowed to make changes in the classes `ArticleService` and `ProcessArticlePage`.</span>
 
