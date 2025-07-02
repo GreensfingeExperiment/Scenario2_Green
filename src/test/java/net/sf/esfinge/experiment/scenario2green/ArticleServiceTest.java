@@ -20,7 +20,7 @@ class ArticleServiceTest {
     }
 
     @Test
-    void testFindArticleUsingLogic() {
+    void testFindArticleUsingGreenFramework() {
         ArticleService articleService = new ArticleService();
         articleService.saveConsumptionEnergy(true);
 
